@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blended NavBar</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .background-image {
+        width: 100%;
+        height: 100vh;
+        background-image: url('PP%20photos/background3.jpg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background-color: transparent;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s;
+    }
+
+    nav a:hover {
+        border-bottom-color: white;
+    }
+
+    .logo {
+        font-family: 'Great Vibes', cursive;
+        font-weight: 100;
+        font-style: normal;
+        font-size: 32px;
+    }
+
+    .central-text, .subtext {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-optical-sizing: auto;
+    }
+
+    .central-text {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2em;
+        color: white;
+    }
+
+    .subtext {
+        font-size: 1em;
+        color: white;
+        
+    }
+
+    .title-line {
+        height: 1px;
+        background-color: rgba(255,255,255,0.8);
+        width: 80%;
+        margin: 5px auto;
+    }
+
+    .logo-small {
+        width: 250px;
+        height: auto;
+        margin-bottom: 5px;
+    }
+    .background {
+        background-image: url('PP%20photos/br5.png');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .portfolio-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    
+        width: 90%;
+        position: relative;
+    }
+
+    .portfolio-item {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .portfolio-title {
+        margin-top: 20px;
+        font-size: 20px;
+        color: white;
+    }
+
+    .portfolio-button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: white;
+        color: black;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .portfolio-button:hover {
+        background-color: #ccc;
+    }
+    .photography-hero-section {
+            background-image: url('PP%20photos/bernd-dittrich-Lb3WyzY6iW0-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            padding: 50px 0; /
+        }
+
+        .photography-hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /
+            z-index: 1;
+        }
+
+        .photography-profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: url('PP%20photos/RON1.jpg') no-repeat center / cover;
+            z-index: 2;
+            border: 4px solid white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .photography-text-content {
+            font-size: 18px;
+            padding: 20px;
+            max-width: 80%;
+            z-index: 2;
+            position: relative; 
+            font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+            font-style: normal;}
+
+        .photography-signature {
+            margin-top: 20px;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 32px;
+            z-index: 2;
+        }
+    .portfolio-title{
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        
+        }
+       .contact-section {
+      text-align: center;
+      padding: 20px; 
+           background-image: url(PP%20photos/br5.png)
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    }
+
+    .social-links a {
+      display: inline-block;
+      text-decoration: none;
+        margin: 0 5px;
+        
+    
+    }
+
+    .social-links img {
+      width: 24px; 
+      height: auto;
+
+    }
+
+
+    .social-links a:hover,
+    .social-links a:focus {
+      opacity: 0.7;    } 
+    .contactsection{
+     
+    }
+</style>
+</head>
+<header>
+<div class="background-image">
+    <nav>
+        <div class="logo">
+            Ron Lugo 
+        </div>
+        <div class="nav-links">
+            <a href="#About">About</a>
+            <a href="Gallery">Gallery</a>
+            <a href="#Contact">Contact</a>
+        </div>
+    </nav>
+    <div class="central-text">
+        <img src="PP%20photos/logo.png" alt="Small Logo" class="logo-small">
+        <div class="title-line"></div>
+        NATURE AND WILDLIFE PHOTOGRAPHER
+        <div class="title-line"></div>
+        <div class="subtext">Ron Lugo</div>
+    </div>
+    </div>
+    </header>
+    <body>
+    <section>
+        <section id="Gallery">
+    <div class="background">
+        <div class="portfolio-section">
+            <div class="portfolio-item">
+                <img src="PP%20photos/wildlife%20img.jpg" alt="Fashion photo 1">
+                <div class="portfolio-title">Birding</div>
+                <a href="page4.html">
+                    <button class="portfolio-button">View Gallery</button>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <img src="PP%20photos/events1.jpg" alt="Fashion photo 2">
+                <div class="portfolio-title">Events</div>
+                <a href="page3.html">
+                    <button class="portfolio-button">View Gallery</button>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <img src="PP%20photos/portraits%201.jpg" alt="Port photo">
+                <div class="portfolio-title">Portraits</div>
+                <a href="page2.html">
+                    <button class="portfolio-button">View Gallery</button>
+                </a>
+            </div>
+        </div>
+    </div>  
+</section>
+        </section>
+    <section>
+        <section>
+        <section id="About">
+        <div class="photography-hero-section">
+        <div class="photography-profile-image"></div>
+        <div class="photography-text-content">
+            Welcome to the captivating world of photography through the lens of a seasoned artist with over 15 years of experience. Based in the vibrant city of New York, I specialize in a diverse range of photography genres, from private events to wildlife, and fashion.
+
+My journey behind the camera has led me to capture moments of raw emotion, fleeting beauty, and untamed nature, all against the iconic backdrop of the Big Apple. Whether it's freezing the energy of a bustling New York Fashion Week runway, preserving the grace of Central Park's dance skaters, or immortalizing the delicate elegance of our avian friends in flight, I strive to evoke a sense of wonder and connection through my work.
+
+
+        </div>
+        <div class="photography-signature">
+            R.L.
+        </div>
+    </div>
+    
+        
+            </section>
+        
+        
+        
+        
+        </section>
+        </section>
+    </body>
+    <footer>
+        <section id="Contact">
+    <section class="contact-section">
+  <h2>Contact Me</h2>
+  <p>Connect with me on social media:</p>
+  <div class="social-links">
+    <a href="https://www.facebook.com/mingling.art">
+      <img src="PP%20photos/FB.png" alt="Facebook">
+    </a>
+    <a href="https://twitter.com/BirdsRon">
+      <img src="PP%20photos/tw.png" alt="Twitter">
+    </a>
+    <a href="https://www.instagram.com/centralparkwildlifeplus/?hl=en">
+      <img src="PP%20photos/igg.png" alt="Instagram">
+    </a>
+   <a href="mailto:RnldLugo@gmail.com">
+      <img src="PP%20photos/maill.png" alt="Email">
+    </a>
+    
+  </div>
+            
+</section>
+        </section>
+    
+    
+    </footer>
+</html>
+
+
