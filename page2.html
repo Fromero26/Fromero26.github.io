@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Gallery</title>
+<style>
+     .fira-sans-regular {
+      font-family: "Fira Sans", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+  body {
+    font-family: "Fira Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  .gallery {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+  }
+  .quote {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  .image {
+    display: inline-block;
+    margin: 5px;
+  }
+  .image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  .image img:hover {
+    transform: scale(1.05);
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+  }
+  .modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .close {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+  }
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .prev {
+    left: 10px;
+  }
+  .next {
+    right: 10px;
+  }
+    nav {
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      margin-top: 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li:last-child {
+      margin-right: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333; 
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #666; 
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f0f0f0; 
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+
+    .brand a {
+      text-decoration: none;
+    }
+</style>
+</head>
+<header>
+<nav>
+  <div class="brand">
+    <a href="index.html" class="fira-sans-regular" style="font-size: 20px; color: #333;">Ron Lugo</a>
+  </div>
+  <ul>
+    <li>
+      <div class="dropdown">
+        <a href="#" class="fira-sans-regular">Gallery</a>
+        <div class="dropdown-content">
+          <a href="page4.html">Birding</a>
+          <a href="page3.html">Events</a>
+          <a href="page2.html">Portraits</a>
+        </div>
+      </div>
+    </li>
+    <li><a href="index.html#About" class="fira-sans-regular">About</a></li>
+    <li><a href="index.html#Contact" class="fira-sans-regular">Contact</a></li>
+  </ul>
+</nav>
+    
+    
+</header>    
+<body>
+
+<div class="gallery">
+  <h1 class="fira-sans-semibold">Expressions Unveiled: Portrait Photography</h1>
+  <p class="quote">"The tool of every self-portrait is the mirror. You see yourself in it. Turn it the other way, and you see the world."</p>
+  <div class="image">
+    <img src="PP%20photos/fashion.jpg" alt="Image 1">
+  </div>
+  <div class="image">
+    <img src="PP%20photos/portraits%201.jpg" alt="Image 2">
+  </div>
+  <div class="image">
+    <img src="PP%20photos/p7.jpg" alt="Image 3">
+  </div>
+  <div class="image">
+    <img src="PP%20photos/p8.jpg" alt="Image 4">
+  </div>
+  <div class="image">
+    <img src="PP%20photos/p9.jpg" alt="Image 5">
+  </div>
+  <div class="image">
+    <img src="PP%20photos/p10.jpg" alt="Image 6">
+  </div>
+  <div class="image">
+    <img src="PP%20photos/p6.jpg" alt="Image 7">
+  </div>
+  <div class="image">
+    <img src="PP%20photos/fashion3.jpg" alt="Image 8">
+  </div>
+  <div class="image">
+    <img src="PP%20photos/p1.jpg" alt="Image 9">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <span class="prev">&#10094;</span>
+  <span class="next">&#10095;</span>
+  <img class="modal-content" id="modal-img">
+</div>
+
+<script>
+  const modal = document.getElementById("myModal");
+  const modalImg = document.getElementById("modal-img");
+  let currentIndex = 0;
+  const images = document.querySelectorAll(".image img");
+  images.forEach((image, index) => {
+    image.addEventListener("click", function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      currentIndex = index;
+    });
+  });
+
+  const span = document.getElementsByClassName("close")[0];
+  span.onclick = function() {
+    modal.style.display = "none";
+  };
+
+  const prev = document.querySelector(".prev");
+  const next = document.querySelector(".next");
+
+  prev.onclick = function() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    modalImg.src = images[currentIndex].src;
+  };
+
+  next.onclick = function() {
+    currentIndex = (currentIndex + 1) % images.length;
+    modalImg.src = images[currentIndex].src;
+  };
+
+</script>
+
+</body>
+</html>
